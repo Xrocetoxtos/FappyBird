@@ -1,3 +1,5 @@
+//Fappy Bird
+
 class Explosion
 {
 	constructor (_posX,_posY,_frameNo)
