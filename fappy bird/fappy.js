@@ -184,7 +184,7 @@ window.onload = function()
 	climbing=false;
 	pressSpace=false;
 	timer=0;
-	timerEnd=10;
+	timerEnd=15;
 
 	var vijand = new Enemy(500,0,5,false);
 	let lijst = [vijand];
@@ -209,6 +209,7 @@ window.onload = function()
 		{
 			health=0;
 			alert("dead");
+			score=0;
 		}
 	}
 	
@@ -335,7 +336,7 @@ window.onload = function()
 			if(climbing==true)
 			{	
 				if(y>0)
-					y-=(speed*timePassed*1.5);
+					y-=(speed*timePassed);
 				else
 					damage();
 			}
@@ -343,7 +344,7 @@ window.onload = function()
 			else
 			{
 				if(y+60 < 400) 
-					y+=(speed*timePassed);
+					y+=(speed*timePassed*0.8);
 				else
 					damage();
 			}
